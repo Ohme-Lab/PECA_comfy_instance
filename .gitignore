@@ -1,0 +1,41 @@
+# ==============================================================
+#  Kit AI PECA — ComfyUI
+#  Tout est versionné sauf ComfyUI/, l'environnement Python
+#  et les données locales de user/ (les workflows restent).
+# ==============================================================
+
+# --- ComfyUI (cloné séparément, version indiquée dans le README) ---
+ComfyUI/
+
+# --- Environnement Python (propre à chaque machine) ---
+.venv/
+__pycache__/
+*.pyc
+
+# --- user/ : on ne garde que les workflows ---
+data/user/*
+!data/user/default/
+data/user/default/*
+!data/user/default/workflows/
+
+# --- Fichiers temporaires de ComfyUI ---
+data/temp/
+
+# --- Secrets ---
+.env
+
+# --- OS / éditeurs ---
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Modèles : GitHub refuse les fichiers > 100 Mo
+models/**/*.safetensors
+models/**/*.ckpt
+models/**/*.pt
+models/**/*.pth
+models/**/*.bin
+models/**/*.onnx
+models/**/*.gguf
